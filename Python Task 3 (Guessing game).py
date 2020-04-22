@@ -16,7 +16,8 @@ def easy_level():
             try:
                 guess = int(input('Guess number: '))
                 guess_count += 1
-                print('This is your trial number',guess_count)
+                limit = guess_limit - guess_count
+                print(f'(You have {limit} guesses left)')
             except:
                 print('Whoops! Be sure the number contain only digits(integers)')
                 continue
@@ -45,7 +46,8 @@ def medium_level():
             try:
                 guess = int(input('Guess number: '))
                 count += 1
-                print('This is your trial number',count)
+                guess_limit = limit - count
+                print(f'You have {guess_limit} guesses lefts')
             except:
                 print('Whoops! Be sure the number contains only digits(integers)')
                 continue
@@ -74,7 +76,8 @@ def hard_level():
             try:
                 guess = int(input('Guess number: '))
                 count_number += 1
-                print('This is your trail number',count_number)
+                limit = count_limit - count_number
+                print(f'(You have {limit} guesses left)')
             except:
                 print('Whoops! Be sure the number contains only digits(integers)')
                 continue
